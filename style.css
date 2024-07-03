@@ -959,5 +959,58 @@ p {
         font-family: 'Poppins-R';
         font-size: 8px;
     }
+  }
+
+  @media  screen and (max-width: 420px){
+    a.tbl-biru {
+        font-family: 'Higuen';
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ddd;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-right: 60px;
+        padding: 10px 20px 15px 20px;
+        color: #000000;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+  }
+
+  @media  screen and (max-width: 400px){
+    .leader1 {
+        width: 1%;
+        margin-left: 12px;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-family: 'Higuen';
+    }
+    
+  }
+
+
+  @media  screen and (max-width: 375px){
+    a.tbl-biru {
+        font-family: 'Higuen';
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ddd;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 10px 5px 15px 5px;
+        color: #000000;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.5s;
+    }
 
   }
