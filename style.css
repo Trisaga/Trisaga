@@ -1217,12 +1217,12 @@ p {
       }
       
       .lead:before {
-        left: -85px;
+        left: -100px;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
       }
       
       .lead:after {
-        right: -85px;
+        right: -100px;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
       }
       
