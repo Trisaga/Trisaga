@@ -32,7 +32,7 @@ body {
     width: auto;
     margin: auto;
     position: relative;
-    background-image: linear-gradient(rgb(4, 4, 30), rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
 }
 
 .logo-trisaga {
@@ -60,12 +60,12 @@ nav {
     line-height: 80px;
     position: fixed;
     top: 0;
-    background: rgb(4, 4, 30);
+    background: rgb(0, 0, 0);
     z-index: 1;
     border-bottom: 0px solid black;
-    box-shadow: 1px 4px 12px -1px rgba(0,0,0,0.10);
-    -webkit-box-shadow: 1px 4px 12px -1px rgba(0,0,0,0.10);
-    -moz-box-shadow: 1px 4px 12px -1px rgba(0,0,0,0.10);
+    box-shadow: 1px 4px 12px -1px rgba(36, 36, 36, 0.1);
+    -webkit-box-shadow: 1px 4px 12px -1px rgba(36, 36, 36, 0.1);
+    -moz-box-shadow: 1px 4px 12px -1px rgba(36, 36, 36, 0.1);
 }
 
 
@@ -241,257 +241,109 @@ p {
     text-decoration: none;
 }
 
-.tengah {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-.tutor-list {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.kartu-tutor {
-    width: 20%;
-    margin:0 auto;
-}
-
-.kartu-tutor img {
-    width: 80%;
-    border-radius: 50%;
-}
-
-.kartu-tutor p {
-    font-family: 'Montserrat-M';
-    font-weight: 800;
-    font-size: 25px;
-    text-align: center;
-    color: black;
-}
-
-.flex-container{
-    display: flex;
-}
-
 .leaders {
     text-align: center;
     width: 100%;
     margin-bottom: 100px;
 }
 
-.leader-list {
-    width: 100%;
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    width: 60%;
+    overflow: hidden;
+    padding: 60px 0;
+    background: rgb(0, 0, 0);
+    white-space: nowrap;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.leader-list2 {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.nama1 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.nama2 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.nama3 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.nama4 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.nama5 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.nama6 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.nama7 {
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.leader1 {
-    width: 1%;
-    margin-left: 50px;
-    position: relative;
-    text-align: center;
-    color: white;
-    font-family: 'Higuen';
-}
-
-.leader1 img {
-    width: 250px;
-}
-
-.leader2 {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1%;
-    margin-left: 240px;
-    font-family: 'Higuen';
-}
-
-.leader2 img {
-    width: 250px;
-}
-
-.leader3 {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1%;
-    margin-left: 240px;
-    font-family: 'Higuen';
-}
-
-.leader3 img {
-    width: 250px;
-}
-
-.leader4 {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1%;
-    margin-left: 240px;
-    font-family: 'Higuen';
-}
-
-.leader4 img {
-    width: 250px;
-}
-
-.leader5 {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1%;
-    margin-left: 240px;
-    font-family: 'Higuen';
-}
-
-.leader5 img {
-    width: 250px;
-}
-
-.leader6 {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1%;
-    margin-left: 240px;
-    font-family: 'Higuen';
-}
-
-.leader6 img {
-    width: 250px;
-}
-
-.leader7 {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1%;
-    margin-left: 240px;
-    font-family: 'Higuen';
-}
-
-.leader7 img {
-    width: 250px;
-}
-
-.partner-list {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.kartu-partner1 {
-    width: 10%;
     margin: 0 auto;
-}
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: start;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 150px;
+    margin: 0 30px;
+  }
 
-.kartu-partner1 img {
-    width: 150px;
-}
-
-.kartu-partner2 {
-    width: 10%;
+  .lead {
+    width: 60%;
+    overflow: hidden;
+    padding: 60px 0;
+    background: rgb(0, 0, 0);
+    white-space: nowrap;
+    position: relative;
     margin: 0 auto;
-}
-
-.kartu-partner2 img {
-    width: 200px;
-    margin-top: -20px;
-}
-
-.kartu-partner3 {
-    width: 10%;
-    margin: 0 auto;
-}
-
-.kartu-partner3 img {
-    width: 180px;
-}
-
-.kartu-partner4 {
-    width: 10%;
-    margin: 0 auto;
-}
-
-.kartu-partner4 img {
-    width: 220px;
-    margin-top: -35px;
-}
-
-.kartu-partner5 {
-    width: 10%;
-    margin: 0 auto;
-}
-
-.kartu-partner5 img {
-    width: 150px;
-}
-
-.kartu-partner6 {
-    width: 11%;
-    margin: 0 auto;
-}
-
-.kartu-partner6 img {
-    width: 150px;
-}
+  }
+  
+  .lead:before,
+  .lead:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .lead:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  }
+  
+  .lead:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  }
+  
+  .lead:hover .lead-slide {
+    animation-play-state: start;
+  }
+  
+  .lead-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+  }
+  
+  .lead-slide img {
+    height: 250px;
+    margin: 0 20px;
+    border-radius: 15px;
+  }
 
 #contact {
     background: black;
@@ -760,205 +612,94 @@ p {
         line-height: 50px;
     }
 
-    .leader1 {
-        width: 1%;
-        margin-left: 50px;
+    .lead {
+        width: 80%;
+        overflow: hidden;
+        padding: 60px 0;
+        background: rgb(0, 0, 0);
+        white-space: nowrap;
         position: relative;
-        text-align: center;
-        color: white;
-        font-family: 'Higuen';
-    }
-    
-    .leader1 img {
-        width: 200px;
-    }
-    
-    .leader2 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 230px;
-        font-family: 'Higuen';
-    }
-    
-    .leader2 img {
-        width: 200px;
-    }
-    
-    .leader3 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: -731px;
-        margin-top: 300px;
-        font-family: 'Higuen';
-    }
-    
-    .leader3 img {
-        width: 200px;
-    }
-    
-    .leader4 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 230px;
-        margin-top: 300px;
-        font-family: 'Higuen';
-    }
-    
-    .leader4 img {
-        width: 200px;
-    }
-    
-    .leader5 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 472px;
-        margin-top: -278px;
-        font-family: 'Higuen';
-    }
-    
-    .leader5 img {
-        width: 200px;
-    }
-    
-    .leader6 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 290px;
-        font-family: 'Higuen';
-    }
-    
-    .leader6 img {
-        width: 200px;
-    }
+        margin: 0 auto;
+      }
+      
+      .lead:before,
+      .lead:after {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+      
+      .lead:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .lead:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .lead:hover .lead-slide {
+        animation-play-state: start;
+      }
+      
+      .lead-slide {
+        display: inline-block;
+        animation: 20s slide infinite linear;
+      }
+      
+      .lead-slide img {
+        height: 250px;
+        margin: 0 20px;
+        border-radius: 15px;
+      }
 
-    .leader7 {
+      .logos {
+        width: 80%;
+        overflow: hidden;
+        padding: 60px 0;
+        background: rgb(0, 0, 0);
+        white-space: nowrap;
         position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 230px;
-        font-family: 'Higuen';
-    }
-    
-    .leader7 img {
-        width: 200px;
-    }
-
-    .nama1 {
-        position: absolute;
-        bottom: 320px;
-        left: 75px;
-    }
-
-    .nama2 {
-        position: absolute;
-        bottom: 320px;
-        left: 80px;
-    }
-    
-    .nama3 {
-        position: absolute;
-        bottom: 15px;
-        left: 75px;
-    }
-    
-    .nama4 {
-        position: absolute;
-        bottom: 15px;
-        left: 75px;
-    }
-    
-    .nama5 {
-        position: absolute;
-        bottom: 40px;
-        left: 80px;
-    }
-    
-    .nama6 {
-        position: absolute;
-        bottom: 15px;
-        left: 75px;
-    }
-
-    .nama7 {
-        position: absolute;
-        bottom: 15px;
-        left: 75px;
-    }
-
-    .kartu-partner1 {
-        width: 10%;
         margin: 0 auto;
-    }
-    
-    .kartu-partner1 img {
-        width: 100px;
-        margin-left: 200px;
-    }
-    
-    .kartu-partner2 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner2 img {
-        width: 135px;
-        margin-top: -15px;
-        margin-left: 240px;
-    }
-    
-    .kartu-partner3 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner3 img {
-        width: 110px;
-        margin-left: -650px;
-        margin-top: 130px;
-    }
-    
-    .kartu-partner4 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner4 img {
-        width: 150px;
-        margin-top: 110px;
-        margin-left: -525px;
-    }
-    
-    .kartu-partner5 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner5 img {
-        width: 110px;
-        margin-top: 130px;
-        margin-left: -425px;
-    }
-    
-    .kartu-partner6 {
-        width: 11%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner6 img {
-        width: 110px;
-        margin-left: 300px;
-    }
+      }
+      
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+      
+      .logos:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .logos:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .logos:hover .logos-slide {
+        animation-play-state: start;
+      }
+      
+      .logos-slide {
+        display: inline-block;
+        animation: 20s slide infinite linear;
+      }
+      
+      .logos-slide img {
+        height: 150px;
+        margin: 0 30px;
+      }
     
     .footer-section {
         width: 40%;
@@ -1270,69 +1011,31 @@ p {
         left: 30px;
     }
 
-    .kartu-partner1 {
-        width: 10%;
+    .logos {
+        width: 80%;
+        overflow: hidden;
+        padding: 15px 0;
+        background: rgb(0, 0, 0);
+        white-space: nowrap;
+        position: relative;
         margin: 0 auto;
-    }
-    
-    .kartu-partner1 img {
+      }
+
+    .logos img {
         width: 100px;
-        margin-left: 70px;
-    }
-    
-    .kartu-partner2 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner2 img {
-        width: 135px;
-        margin-top: -15px;
-        margin-left: 165px;
-    }
-    
-    .kartu-partner3 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner3 img {
-        width: 110px;
-        margin-left: -600px;
-        margin-top: 130px;
-    }
-    
-    .kartu-partner4 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner4 img {
-        width: 150px;
-        margin-top: 110px;
-        margin-left: -383px;
-    }
-    
-    .kartu-partner5 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner5 img {
-        width: 110px;
-        margin-top: 130px;
-        margin-left: -165px;
-    }
-    
-    .kartu-partner6 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner6 img {
-        width: 110px;
-        margin-left: 285px;
-    }
+        height: 105px;
+        margin: 5px;
+      }
+      
+      .logos:before {
+        left: -1px;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .logos:after {
+        right: -1px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
     
     .footer-section {
         width: 40%;
@@ -1362,7 +1065,7 @@ p {
   }
 
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 431px) {
     .logo-trisaga {
         width: 50%
     }
@@ -1492,208 +1195,87 @@ p {
         line-height: 50px;
     }
 
-    .leader1 {
-        width: 1%;
-        margin-left: 40px;
+    .lead {
+        width: 80%;
+        overflow: hidden;
+        padding: 20px 0;
+        background: rgb(0, 0, 0);
+        white-space: nowrap;
         position: relative;
-        text-align: center;
-        color: white;
-        font-family: 'Higuen';
-    }
-    
-    .leader1 img {
-        width: 85px;
-    }
-    
-    .leader2 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 85px;
-        font-family: 'Higuen';
-    }
-    
-    .leader2 img {
-        width: 85px;
-    }
-
-    .leader3 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: -272px;
-        font-family: 'Higuen';
-        margin-top: 120px;
-    }
-    
-    .leader3 img {
-        width: 85px;
-    }
-
-    .leader4 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 85px;
-        font-family: 'Higuen';
-        margin-top: 120px;
-    }
-    
-    .leader4 img {
-        width: 85px;
-    }
-
-    .leader5 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: 175px;
-        font-family: 'Higuen';
-        margin-top: -123px;
-    }
-    
-    .leader5 img {
-        width: 85px;
-    }
-
-    .leader6 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: -94px;
-        font-family: 'Higuen';
-        margin-top: -5px;
-    }
-    
-    .leader6 img {
-        width: 85px;
-    }
-
-    .leader7 {
-        position: relative;
-        text-align: center;
-        color: white;
-        width: 1%;
-        margin-left: -94px;
-        font-family: 'Higuen';
-        margin-top: -5px;
-    }
-    
-    .leader7 img {
-        width: 85px;
-    }
-
-
-    .nama1 {
-        position: absolute;
-        bottom: 130px;
-        left: 20px;
-    }
-
-    .nama2 {
-        position: absolute;
-        bottom: 130px;
-        left: 25px;
-    }
-    
-    .nama3 {
-        position: absolute;
-        bottom: 15px;
-        left: 25px;
-    }
-    
-    .nama4 {
-        position: absolute;
-        bottom: 15px;
-        left: 18px;
-    }
-    
-    .nama5 {
-        position: absolute;
-        bottom: 132px;
-        left: 23px;
-    }
-    
-    .nama6 {
-        position: absolute;
-        bottom: 15px;
-        left: 22px;
-    }
-
-    .nama7 {
-        position: absolute;
-        bottom: 15px;
-        left: 22px;
-    }
-
-    .kartu-partner1 {
-        width: 10%;
         margin: 0 auto;
-    }
-    
-    .kartu-partner1 img {
-        width: 100px;
-        margin-left: 23px;
-    }
-    
-    .kartu-partner2 {
-        width: 10%;
+        margin-bottom: -100px;
+      }
+      
+      .lead:before,
+      .lead:after {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+      
+      .lead:before {
+        left: -85px;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .lead:after {
+        right: -85px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .lead:hover .lead-slide {
+        animation-play-state: start;
+      }
+      
+      .lead-slide {
+        display: inline-block;
+        animation: 20s slide infinite linear;
+      }
+      
+      .lead-slide img {
+        height: 150px;
+        margin: 0 20px;
+        border-radius: 15px;
+      }
+
+    .logos {
+        width: 80%;
+        overflow: hidden;
+        padding: 10px 0;
+        background: rgb(0, 0, 0);
+        white-space: nowrap;
+        position: relative;
         margin: 0 auto;
-    }
-    
-    .kartu-partner2 img {
-        width: 135px;
-        margin-top: -15px;
-        margin-left: 65px;
-    }
-    
-    .kartu-partner3 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner3 img {
-        width: 110px;
-        margin-left: -330px;
-        margin-top: 130px;
-    }
-    
-    .kartu-partner4 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner4 img {
-        width: 150px;
-        margin-top: 110px;
-        margin-left: -210px;
-    }
-    
-    .kartu-partner5 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner5 img {
-        width: 110px;
-        margin-top: 130px;
-        margin-left: -90px;
-    }
-    
-    .kartu-partner6 {
-        width: 10%;
-        margin: 0 auto;
-    }
-    
-    .kartu-partner6 img {
-        width: 110px;
-        margin-left: 135px;
-    }
+      }
+
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+
+      .logos img {
+        width: 60px;
+        height: 65px;
+        margin: 5px;
+      }
+      
+      .logos:before {
+        left: -120px;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .logos:after {
+        right: -120px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
     
     .footer-section {
         width: 40%;
@@ -1841,3 +1423,4 @@ p {
     }
 
   }
+
