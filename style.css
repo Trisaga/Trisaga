@@ -1217,12 +1217,12 @@ p {
       }
       
       .lead:before {
-        left: -100px;
+        left: -400px;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
       }
       
       .lead:after {
-        right: -100px;
+        right: -400px;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
       }
       
@@ -1237,7 +1237,7 @@ p {
       
       .lead-slide img {
         height: 150px;
-        margin: 0 20px;
+        margin: 0 10px;
         border-radius: 15px;
       }
 
